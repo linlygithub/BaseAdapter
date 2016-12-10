@@ -1,6 +1,7 @@
 package com.linly.baseadapterlibrary.baselistview;
 
 import android.content.Context;
+import android.util.Log;
 import android.util.SparseArray;
 import android.view.InflateException;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 
 import com.linly.baseadapterlibrary.R;
 
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.L;
 import static android.icu.lang.UCharacter.GraphemeClusterBreak.V;
 import static android.media.CamcorderProfile.get;
 
@@ -18,6 +20,7 @@ import static android.media.CamcorderProfile.get;
  */
 
 public class ViewHolder {
+    private static int count;
     private SparseArray<View> mViews;
     private View mConvertView;
     private Context mContext;//需要加载布局
