@@ -24,6 +24,7 @@ public abstract class CommAdapter<T> extends BaseAdapter{
         mContext = context;
         mList = list;
         mItemResId = itemResId;
+
     }
 
     @Override
@@ -43,7 +44,7 @@ public abstract class CommAdapter<T> extends BaseAdapter{
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder holder = ViewHolder.getViewHolder(mContext,convertView,mItemResId,parent);
+        ViewHolder holder = ViewHolder.getViewHolder(mContext,convertView,mItemResId,parent,position);
         convert(holder,getItem(position));
         return holder.getConvertView();
     }
